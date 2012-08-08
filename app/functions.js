@@ -8,13 +8,13 @@ define(function() {
     },
 
     speak : function(fn, obj) {
+      return fn.call(obj);
     },
 
     functionFunction : function(str) {
-      console.log(str);
-      //func : function(sas){
-        //return cad= str +', '+sas); 
-      //}
+        return function(str2){
+          return  str + ', ' + str2;
+        }
     },
 
     makeClosures : function(arr, fn) {
