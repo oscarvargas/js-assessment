@@ -34,11 +34,11 @@ define(function() {
     },
 
     callIt : function(fn) {
-      //var arr =[];
-       //for (var i=1;i<arguments.length;i++) {
-         //fn(arguments[i]);
-      //}
-      //console.log(fn());
+      var arr =[];
+       for (var i=1;i<arguments.length;i++) {
+         arr.push(arguments[i])
+      }
+      fn.apply(null, arr);
     },
 
     curryIt : function(fn) {
