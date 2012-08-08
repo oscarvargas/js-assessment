@@ -22,19 +22,31 @@ define(function() {
     },
 
     partial : function(fn, str1, str2) {
-
+        var partial = fn.bind(null, str1, str2);
+        return partial;
     },
 
     useArguments : function() {
-
+      var sum = 0;
+       for (var i=0;i<arguments.length;i++)
+         sum = sum +arguments[i];
+      return sum;
     },
 
     callIt : function(fn) {
-
+      //var arr =[];
+       //for (var i=1;i<arguments.length;i++) {
+         //fn(arguments[i]);
+      //}
+      //console.log(fn());
     },
 
     curryIt : function(fn) {
-
+      //return function(){
+       //for (var i=1;i<arguments.length;i++) {
+      //}
+      //return fn();
+      //}
     }
   };
 });
